@@ -9,7 +9,7 @@ customize these macro variables: */
 
 /* Full path to the RXNCONSO.RRF file - OPTIONAL (skip if already have
 RXNCONSO table loaded) */
-%let RxNorm_path = E:\DATA\RXNORM\RxNorm_full_20200406\rrf\RXNCONSO.RRF ;
+%let RxNorm_path = "E:\DATA\RXNORM\RxNorm_full_20200406\rrf\RXNCONSO.RRF" ;
 
 /* Where to store the SAS dataset - REQUIRED
 	If dataset is already stored locally, use this to identify its location */
@@ -21,7 +21,7 @@ RXNCONSO table loaded) */
 /* load RxNorm data */
 data &RxNorm_DSN ;
 	%let _EFIERR_ = 0;
-	infile "&RxNorm_path" delimiter='|' MISSOVER DSD lrecl=32767;
+	infile &RxNorm_path delimiter='|' MISSOVER DSD lrecl=32767;
 	informat RXCUI $8. LAT $3. TS $1. LUI $8. STT $3. SUI $8. ISPREF $1. RXAUI $8. SAUI $50. SCUI $50. SDUI $50. SAB $20.
 		TTY $20. CODE $50. STR $3000. SRL $10. SUPPRESS $1. CVF $4. ;
 	format RXCUI $8. LAT $3. TS $1. LUI $8. STT $3. SUI $8. ISPREF $1. RXAUI $8. SAUI $50. SCUI $50. SDUI $50. SAB $20.
