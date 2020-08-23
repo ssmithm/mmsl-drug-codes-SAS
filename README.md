@@ -14,5 +14,5 @@
  The drug codes can be found in the CODE column and all start with d followed by a series of 5 numbers
 
  Also included are example datasets:
- 1. antihtn_drug_codes.sas7bdat = A complete list of antihypertensive drugs.
- 2. antihtn_drug_codes_curated.sas7bdat = A curated dataset that incorporates additional detailed information extracted from our other project: https://github.com/ssmithm/rxnorm-drug-lists/tree/master/antihypertensive_drugs  
+ 1. antihtn_drug_codes.sas7bdat = A complete (uncurated) list of antihypertensive drugs identified by matching on drug name.
+ 2. antihtn_drug_codes_curated.sas7bdat = A curated dataset that incorporates additional detailed information extracted from our other project: https://github.com/ssmithm/rxnorm-drug-lists/tree/master/antihypertensive_drugs  and excludes non-antihypertensive drugs (e.g., ophthalmic beta-blockers). 
